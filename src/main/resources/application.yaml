@@ -4,10 +4,10 @@ spring:
   application:
     name: liu
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/myproject?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
-    username: root
-    password: 200425
+    driver-class-name: 
+    url: 
+    username: 
+    password: 
   redis:
     lettuce:
       pool:
@@ -20,9 +20,9 @@ spring:
     default-property-inclusion: non_null 
   data:
     redis:
-      host: 127.0.0.1
-      port: 6379
-      password: 123456
+      host: 
+      port: 
+      password:
 mybatis-plus:
   type-aliases-package: com.liu.entity 
 logging:
