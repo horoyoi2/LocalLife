@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <title>アプリケーション</title>
+  <link href="./css/login.css" rel="stylesheet">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="./css/element.css">
+
+  <style type="text/css">
+      .el-radio__input.is-checked .el-radio__inner {
+          border-color: rgb(51, 143, 255);
+          background: rgb(9, 18, 200);
+      }
+      .el-input__inner:focus {
+          border: 1px solid rgba(246, 173, 149, 0.726);
+      }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="login-container">
+    <div class="header">
+      <div class="header-back-btn" @click="goBack"><i class="el-icon-arrow-left"></i></div>
+      <div class="header-title">パスワードログイン&nbsp;&nbsp;&nbsp;</div>
+    </div>
+    <div class="content">
+      <div class="login-form">
+        <el-input placeholder="電話番号を入力してください" v-model="form.phone">
+        </el-input>
+        <div style="height: 5px"></div>
+        <el-input placeholder="パスワードを入力してください" v-model="form.password">
+        </el-input>
+        <div style="text-align: center; color: #8c939d;margin: 5px 0"><a href="javascript:void(0)">パスワードを忘れた</a></div>
+        <el-button @click="login" style="width: 100%; background-color:rgb(51, 126, 255); color: #fff;">ログイン</el-button>
+        <div style="text-align: right; color:#333333; margin: 5px 0"><a href="/login.html">認証コードログイン</a></div>
+      </div>
+      <div class="login-radio">
+        <div>
+          <input type="radio" name="readed" v-model="radio" value="1">
+          <label for="readed"></label>
+        </div>
+        <div>読んで同意しました
+          <a href="javascript:void(0)">
+          《ユーザーサービス契約》</a>、
+          <a href="javascript:void(0)">《プライバシーポリシー》</a>
+          等、責任の免除または制限、訴訟管轄合意などの太字の条項に同意します。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./js/vue.js"></script>
+<script src="./js/axios.min.js"></script>
+<!-- 引入组件库 -->
+<script src="./js/element.js"></script>
+<script src="./js/common.js"></script>
+<script>
+
+  const app = new Vue({
+    el: "#app",
+    data: {
+      radio: "",
+      form:{
+      }
+    },
+    methods: {
+      login(){
+        if(!this.radio){
+          this.$message.error("必ず利用規約をお読みください。");
+          return;
+        }
+        axios.post("/user/login", this.form)
+          .then(({data}) => {
+            if(data){
+              // 保存用户信息到session
+              sessionStorage.setItem("token", data);
+            }
+            // 跳转到首页
+            location.href = "/info.html"
+          })
+          .catch(err => this.$message.error(err))
+      },
+      goBack(){
+        history.back();
+      }
+    }
+  })
+</script>
+</body>
+</html>
