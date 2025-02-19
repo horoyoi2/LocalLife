@@ -11,25 +11,34 @@ LocalLife は Spring Boot を基盤としたローカルライフサービスプ
 マイページ：フォローしているユーザーのブログ を閲覧、自分の投稿を管理。
 
 ソーシャル機能：ユーザーフォロー/フォロー解除 が可能で、コミュニティのインタラクションを向上。
-
-![屏幕截图 2025-02-19 114706](https://github.com/user-attachments/assets/01961487-95a2-44e0-b114-45d076343bd5)
-
+![屏幕截图 2025-02-19 161935](https://github.com/user-attachments/assets/90124b63-a523-4b32-9f03-4cd8da574ac5)![屏幕截图 2025-02-19 162820](https://github.com/user-attachments/assets/c916f024-3448-4680-a536-aab52cab986c)
+![屏幕截图 2025-02-19 162829](https://github.com/user-attachments/assets/3944653c-0916-4490-929d-bcda395ecff5)
 
 🔹 店舗モジュール
 
 店舗情報の表示：店舗名・住所・評価・カテゴリ などの詳細情報を提供。
 
+![屏幕截图 2025-02-19 114619](https://github.com/user-attachments/assets/39dee6d1-749a-4be5-8ebc-4091f76f5427)![屏幕截图 2025-02-19 114555](https://github.com/user-attachments/assets/b6ba25b3-6ff8-43f6-9e70-aa430ef02589)
+
+
 🔹 レビューモジュール
 
-ユーザーレビュー：店舗への 評価とテキストレビュー を投稿し、他のユーザーの意思決定をサポート。
+ユーザーレビュー：ユーザーは ブログ形式 で 店舗の評価やテキストレビュー を投稿できます。
 
 「いいね！」機能：レビューの いいね数をカウントし、上位5人のプロフィール画像を表示 することで、インタラクションを強化。
+
+
+![屏幕截图 2025-02-19 114942](https://github.com/user-attachments/assets/af7a06fa-83f4-462e-b126-9f445fcfb5af)![屏幕截图 2025-02-19 115824](https://github.com/user-attachments/assets/2bdb2dfb-faaa-49e7-a5f6-321f105d6b32)
+
 
 🔹 クーポンモジュール
 
 クーポン発行：店舗が定期的にクーポンを配布し、ユーザーの購買意欲を促進。
 
 セール・フラッシュセール：時間限定の割引販売 に対応し、店舗のマーケティング効果を向上。
+
+![屏幕截图 2025-02-19 114505](https://github.com/user-attachments/assets/eb132f11-4555-48b1-9984-cc8cb00c6e4d)
+
 
 🔹 高負荷対策 & キャッシュ最適化
 
