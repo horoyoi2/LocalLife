@@ -57,7 +57,7 @@
   </div>
   <div class="content">
     <el-tabs v-model="activeName" @tab-click="handleClick">
-      <el-tab-pane label="笔记" name="1">
+      <el-tab-pane label="ブロック" name="1">
         <div v-for="b in blogs" :key="b.id" class="blog-item">
           <div class="blog-img"><img :src="b.images.split(',')[0]" alt=""></div>
           <div class="blog-info">
